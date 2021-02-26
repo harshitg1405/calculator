@@ -1,0 +1,70 @@
+<html>
+<head>
+	<h1><center>Calculator</center></h1>
+	<style> input[type="button"]
+		{
+			color : red;
+			width : 100%;
+			background-color: yellow;
+		}
+		input[type="text"]
+		{
+          color : yellow;
+          width : 100%;
+          background-color: grey; 
+		}
+	</style>
+	<script type="text/javascript">
+		function test(x)
+		{
+			document.getElementById("v1").value +=x
+		}
+		function clr()
+		{
+
+			document.getElementById("v1").value =""
+		}
+		function eql()
+		{
+
+			var v2 = document.getElementById("v1").value 
+			var v3 = eval(v2)
+			 document.getElementById("v1").value  =v3			 
+		}
+	</script>
+
+</head>
+<body>
+	<table border="1" align="center">
+		<tr>
+			
+			<td colspan=3><input type="text" id="v1"> </td>
+			<td><input type="button" value="C" onclick="clr()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1" onclick="test('1')"></td>
+			<td><input type="button" value="2" id="v1" onclick="test('2')"></td>					
+			<td><input type="button" value="3" id="v1" onclick="test('3')"></td>
+			<td><input type="button" value="+" id="v1" onclick="test('+')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" id="v1" onclick="test('4')"></td>
+			<td><input type="button" value="5" id="v1" onclick="test('5')"></td>					
+			<td><input type="button" value="6" id="v1" onclick="test('6')"></td>
+			<td><input type="button" value="-" id="v1" onclick="test('-')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" id="v1" onclick="test('7')"></td>
+			<td><input type="button" value="8" id="v1" onclick="test('8')"></td>					
+			<td><input type="button" value="9" id="v1" onclick="test('9')"></td>
+			<td><input type="button" value="/" id="v1" onclick="test('/')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="." id="v1" onclick="test('.')"></td>
+			<td><input type="button" value="0" id="v1" onclick="test('0')"></td>					
+			<td><input type="button" value="=" id="v1" onclick="eql()"></td>
+			<td><input type="button" value="*" id="v1" onclick="test('*')"></td>
+		</tr>
+	</table>
+</body>
+</html>
